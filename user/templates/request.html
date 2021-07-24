@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for request in requests %}
+<h2>To :{{request.owner.username}}</h2>
+<h3>status :{{request.status}}</h3>
+<a href="/delete_request/{{request.id}}/">delete request</a>
+<hr>
+{% endfor %}
+</body>
+</html>

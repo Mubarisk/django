@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>owners</h1>
+<br>
+<hr>
+<br>
+{% for owner in owners %}
+<h3>{{owner.user.username}}</h3>
+<br>
+<h3>{{owner.user.email}}</h3>
+<br>
+<a href="/detailed_owner_view/{{owner.user.id}}/">view</a>
+<hr>
+{% endfor %}
+</body>
+</html>

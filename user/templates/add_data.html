@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action=""  method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="number" name="phone" placeholder="phone number">
+    <br>
+    <br>
+    <input type="file" name="image">
+    <br>
+    <br>
+    <input type="hidden" value="{{userid}}" name="userid">
+    <input type="submit" value="add">
+
+<h1>{{userid}}</h1>
+</form>
+
+<a href="/">go back</a>
+</body>
+</html>

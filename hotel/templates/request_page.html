@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for data in datas %}
+<h2>{{data.userid}}</h2>
+<h3> {{data.status}}</h3>
+<br>
+<a href="accept_request/{{data.id}}">accept request</a>
+<hr>
+{% endfor %}
+<a href="/hotel/">back</a>
+</body>
+</html>

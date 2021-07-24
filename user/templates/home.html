@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/view_requests/">your requests</a>
+{% for d in data %}
+<h1>user name :   {{d.user.username}}</h1>
+<br>
+<br>
+<h2>user email :   {{d.user.email}}</h2>
+<br>
+<h3>user phone :   {{ d.phone }}</h3>
+<br>
+<h2> likes :{{d.like}} </h2>
+<br>
+<img src="{{ d.image.url }}" width="150px" height="150px">
+<br>
+<br>
+<a href="/edit_data/">edit data</a>
+<br>
+<br>
+<a href="/delete_data/">delete data</a>
+{% endfor %}
+<br>
+<br>
+<a href="/view_owners/">view owners</a>
+<br>
+<br>
+<a href="{% url 'view_users' %}" >view users</a>
+<br>
+<br>
+{% if  data %}
+{% else %}
+<a href="/add_user_data/">add image and phone number </a>
+{% endif %}
+<br>
+<br>
+
+<a href="{% url 'logout' %}">log out</a>
+<br>
+<br>
+
+<a href="/delete_user/">delete user</a>
+
+
+<br>
+<br>
+
+</body>
+</html>

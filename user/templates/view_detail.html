@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> username  : {{user}}</h1>
+<br>
+<h2>mail   :{{user.email}}</h2>
+
+<br>
+
+<h3>mobile : {{profile.phone}}</h3>
+<br>
+<br>
+<img src="{{profile.image.url}}" alt="image" height="150px" width="150px">
+<br>
+<h2>profile like :{{profile.like}}</h2>
+<br>
+<a href="/users/addlike/{{user.id}}/">like</a>
+<br>
+<br>
+<a href="/users/">back</a>
+</body>
+</html>

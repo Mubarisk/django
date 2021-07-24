@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for user in profiles %}
+<h2> {{user.phone}}</h2><br>
+<br>
+<img src="{{user.image.url}}" alt="no picture found" height="150px" width="150px">
+<br>
+<a href="/users/detailed_view/{{user.user_id}}/">view detail</a>
+<br>
+<hr>
+{% endfor %}
+<br>
+<br>
+<a href="/">back</a>
+</body>
+</html>

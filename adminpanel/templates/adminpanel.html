@@ -1,0 +1,27 @@
+<a href="{% url 'logout' %}">logout</a>
+<br>
+<a href="{% url 'add_owner'  %}">add owner</a>
+
+<h1>users</h1>
+{% for user in users %}
+<h1>{{user.user.username}}</h1>
+<br>
+<h2> {{user.user.email}}</h2>
+<br>
+<a href="{% url 'remove' user.user.id %}">remove</a>
+<br>
+
+<br>
+<hr>
+{% endfor %}
+<hr><hr>
+<h1>owners</h1>
+{% for owner in owners %}
+<h1>{{owner.user.username}}</h1>
+<br>
+<h2> {{owner.user.email}}</h2>
+<br>
+<a href="{% url 'remove' owner.user.id %}">remove</a>
+<br>
+<hr>
+{% endfor %}
